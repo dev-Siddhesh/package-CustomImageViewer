@@ -94,9 +94,9 @@ public class CustomImageViewer: UIView {
         currentIndex = 0
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            closeBtn.setImage(UIImage(named: "close-iPad"), for: .normal)
-            backBtn.setImage(UIImage(named: "back-1-iPad"), for: .normal)
-            nextBtn.setImage(UIImage(named: "next-iPad"), for: .normal)
+//            closeBtn.setImage(UIImage(named: "close-iPad"), for: .normal)
+//            backBtn.setImage(UIImage(named: "back-1-iPad"), for: .normal)
+//            nextBtn.setImage(UIImage(named: "next-iPad"), for: .normal)
         }
         
         imageScrollView.delegate = self as UIScrollViewDelegate
