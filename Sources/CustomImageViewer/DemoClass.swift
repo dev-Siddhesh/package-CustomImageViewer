@@ -13,7 +13,7 @@ public class DemoClass {
         
     }
     
-    public let a = "A"
+    let a = "A"
     public var b = ""
     
     public func returnB() -> String {
