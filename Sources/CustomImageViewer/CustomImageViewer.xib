@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomImageViewer" customModule="MediDeals" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomImageViewer" customModule="CustomImageViewer">
             <connections>
                 <outlet property="backBtn" destination="jA4-1I-395" id="qIM-I5-oad"/>
                 <outlet property="closeBtn" destination="sJP-hr-Nd6" id="ISI-KE-cSr"/>
@@ -92,7 +92,7 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="xmark" catalog="system"/>
+                            <state key="normal" image="close"/>
                             <connections>
                                 <action selector="closeImageViewerAction:" destination="-1" eventType="touchUpInside" id="da8-XP-YDS"/>
                             </connections>
@@ -171,6 +171,6 @@
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.forward" catalog="system" width="128" height="95"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="close" width="20" height="20"/>
     </resources>
 </document>
