@@ -8,7 +8,7 @@
 import Foundation
 
 public class DemoClass {
-    let a = "A"
+    public let a = "A"
     var b = ""
     
     public func returnB() -> String {
