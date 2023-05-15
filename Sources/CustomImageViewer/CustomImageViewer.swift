@@ -16,7 +16,7 @@ enum IndexChangeDirection{
     case down
 }
 
-class CustomImageViewer: UIView {
+public class CustomImageViewer: UIView {
     
     let nibName = "CustomImageViewer"
     
@@ -30,7 +30,7 @@ class CustomImageViewer: UIView {
     @IBOutlet weak var imageScrollView: UIScrollView!
     
     // MARK: - Class properties
-    public weak var delegate: CustomImageViewerDelegate?
+    weak var delegate: CustomImageViewerDelegate?
     
     private var arrayCount = 0
     private var currentIndex = 0
@@ -149,7 +149,7 @@ class CustomImageViewer: UIView {
 
 //MARK: - UICollectionViewDelegate
 extension CustomImageViewer: UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if imageArr.count == 1{
             backBtn.isHidden = true
             nextBtn.isHidden = true
@@ -160,7 +160,7 @@ extension CustomImageViewer: UICollectionViewDelegate, UICollectionViewDataSourc
         return self.imageArr.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomImageViewerCollectionViewCell", for: indexPath) as! CustomImageViewerCollectionViewCell
         cell.imageView.image = self.imageArr[indexPath.row]
         if self.currentIndex == indexPath.row{
@@ -170,7 +170,7 @@ extension CustomImageViewer: UICollectionViewDelegate, UICollectionViewDataSourc
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let selectedIndexPath:IndexPath = IndexPath(item: currentIndex, section: 0)
         collectionView.cellForItem(at: selectedIndexPath)?.isSelected = false
@@ -203,7 +203,7 @@ extension CustomImageViewer: UICollectionViewDelegate, UICollectionViewDataSourc
 
 //MARK: - UIScrollViewDelegate
 extension CustomImageViewer: UIScrollViewDelegate{
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return mainImageView
     }
 }
