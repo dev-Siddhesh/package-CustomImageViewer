@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Demo {
+public class DemoClass {
     let a = "A"
     var b = ""
     
