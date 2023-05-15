@@ -14,7 +14,7 @@ public class DemoClass {
     }
     
     public let a = "A"
-    var b = ""
+    public var b = ""
     
     public func returnB() -> String {
         b = "B"
