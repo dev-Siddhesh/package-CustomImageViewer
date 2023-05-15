@@ -8,6 +8,11 @@
 import Foundation
 
 public class DemoClass {
+    
+    public init() {
+        
+    }
+    
     public let a = "A"
     var b = ""
     
