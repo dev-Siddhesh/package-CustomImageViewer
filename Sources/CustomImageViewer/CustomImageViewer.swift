@@ -18,7 +18,7 @@ enum IndexChangeDirection{
 
 public class CustomImageViewer: UIView {
     
-    public let nibName = "CustomImageViewer"
+    let nibName = "CustomImageViewer"
     
     //MARK: - @IBOutlet
     @IBOutlet weak var imageCollectionView: UICollectionView!
